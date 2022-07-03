@@ -1,0 +1,27 @@
+{
+  "name": "patrykszydlowski.com",
+  "description": "Personal website",
+  "version": "0.0.0-development",
+  "private": true,
+  "sideEffects": false,
+  "author": {
+    "name": "Patryk Szydłowski",
+    "email": "me@patrykszydlowski.com",
+    "url": "https://patrykszydlowski.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patryk-szydlowski/patrykszydlowski.com.git"
+  },
+  "readme": "https://github.com/patryk-szydlowski/patrykszydlowski.com#readme",
+  "bugs": {
+    "url": "https://github.com/patryk-szydlowski/patrykszydlowski.com/issues"
+  },
+  "engines": {
+    "node": "18",
+    "npm": "8"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
