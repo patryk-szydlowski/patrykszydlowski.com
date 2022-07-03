@@ -3,13 +3,21 @@
     {
       "extends": ["canonical", "canonical/module", "canonical/prettier"],
       "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
-      "plugins": ["simple-import-sort"],
+      "plugins": ["simple-import-sort", "prefer-arrow-functions"],
       "rules": {
         "arrow-body-style": ["error", "as-needed"],
         "canonical/destructuring-property-newline": "off",
         "canonical/import-specifier-newline": "off",
         "import/extensions": "off",
         "import/order": "off",
+        "prefer-arrow-functions/prefer-arrow-functions": [
+          "error",
+          {
+            "classPropertiesAllowed": true,
+            "disallowPrototype": true,
+            "returnStyle": "implicit"
+          }
+        ],
         "simple-import-sort/exports": "error",
         "simple-import-sort/imports": "error",
         "unicorn/text-encoding-identifier-case": "off"
@@ -32,6 +40,13 @@
     {
       "extends": ["canonical/jest"],
       "files": ["*.test.ts", "*.test.tsx"]
+    },
+    {
+      "extends": ["canonical/node"],
+      "files": ["*.cloudflare.js"],
+      "rules": {
+        "node/no-process-env": "off"
+      }
     },
     {
       "extends": ["canonical/node"],

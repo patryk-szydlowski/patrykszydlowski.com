@@ -3,6 +3,18 @@
 /.idea
 /*.iml
 
-# generated outputs
+# generic generated outputs
 /node_modules
 /.eslintcache
+/tsconfig.tsbuildinfo
+
+# remix generated outputs
+/.cache
+/functions/\[\[path\]\].js
+/functions/\[\[path\]\].js.map
+/public/build
+
+# environment files
+.env
+.env.*
+!.env.example
