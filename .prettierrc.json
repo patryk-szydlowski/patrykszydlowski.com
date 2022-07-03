@@ -4,5 +4,6 @@
   "singleQuote": false,
   "jsxSingleQuote": false,
   "trailingComma": "es5",
-  "quoteProps": "as-needed"
+  "quoteProps": "as-needed",
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

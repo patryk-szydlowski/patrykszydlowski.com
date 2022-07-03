@@ -3,7 +3,7 @@
     {
       "extends": ["canonical", "canonical/module", "canonical/prettier"],
       "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
-      "plugins": ["simple-import-sort", "prefer-arrow-functions"],
+      "plugins": ["simple-import-sort", "prefer-arrow-functions", "tailwindcss"],
       "rules": {
         "arrow-body-style": ["error", "as-needed"],
         "canonical/destructuring-property-newline": "off",
@@ -12,14 +12,17 @@
         "import/order": "off",
         "prefer-arrow-functions/prefer-arrow-functions": [
           "error",
-          {
-            "classPropertiesAllowed": true,
-            "disallowPrototype": true,
-            "returnStyle": "implicit"
-          }
+          { "classPropertiesAllowed": true, "disallowPrototype": true, "returnStyle": "implicit" }
         ],
         "simple-import-sort/exports": "error",
         "simple-import-sort/imports": "error",
+        "tailwindcss/classnames-order": "error",
+        "tailwindcss/enforces-negative-arbitrary-values": "error",
+        "tailwindcss/enforces-shorthand": "error",
+        "tailwindcss/migration-from-tailwind-2": "error",
+        "tailwindcss/no-arbitrary-value": "error",
+        "tailwindcss/no-contradicting-classname": "error",
+        "tailwindcss/no-custom-classname": "error",
         "unicorn/text-encoding-identifier-case": "off"
       }
     },
@@ -67,7 +70,8 @@
       "rules": {
         "jsonc/array-bracket-newline": ["error", "consistent"],
         "jsonc/array-element-newline": ["error", "consistent"],
-        "jsonc/object-curly-spacing": ["error", "always"]
+        "jsonc/object-curly-spacing": ["error", "always"],
+        "jsonc/object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }]
       }
     },
     {
@@ -93,10 +97,7 @@
             ],
             "pathPattern": "^$"
           },
-          {
-            "order": { "type": "asc" },
-            "pathPattern": ".*"
-          }
+          { "order": { "type": "asc" }, "pathPattern": ".*" }
         ]
       }
     }
